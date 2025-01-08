@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <title>JS Example</title>
+</head>
+<body>
+        <h1 id="head" onclick="test()">JS Example</h1>
+        <form action="" method="" enctype="" onsubmit="return test()">
+            <input type="text" id="username" name="" value="" onkeyup="f1()" />
+            <input type="submit" name="" value="Click" onclick="f1()" />
+            <p id="msg"></p>
+        </form>
+        <script>
+            //name = 'alamin';
+            //var name = 'alamin';
+            // let name = 'alamin';
+            // let std = ['alamin', 1, 2.5, 'alamin@aiub.edu'];
+
+            // function sum(a, b){
+            //     return a+b;
+            // }
+            // sum();
+
+            // let f1 = function (a, b){
+            //     return a+b;
+            // }
+
+            // let f2 = (a, b)=>a+b;
+
+            // for(let i=0; i<10; i++){
+
+            // }
+
+            // if(){
+
+            // }else{
+
+            // }
+            //alert("test");
+            //document.write('Testing from JS...');
+            //console.log('test');
+
+            function test(){
+                document.getElementsByTagName('h1')[0].innerHTML = "Test";
+                document.getElementsByTagName('h1')[0].style.color = "red";
+            }
+
+            function f1(){
+                let username = document.getElementById('username').value;
+                if(username == ""){
+                    document.getElementById('msg').innerHTML = "please type username ...";
+                    document.getElementById('msg').style.color = "red";
+
+                }else{
+                    document.getElementById('head').innerHTML = username;
+                    document.getElementById('msg').innerHTML = "";
+                }
+
+            }
+        </script>
+</body>
+</html>
